@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wooncoop Simulator</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Karma&display=swap" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <img src="logo.png" alt="Wooncoop Logo" class="logo" />
+      <h1>Wooncoop Simulator</h1>
+    </header>
+
+    <div class="form">
+      <label for="woningType">🏠 Kies een woningtype:</label>
+      <select id="woningType">
+        <option value="251407">Studio (1.07) – €251.407,00</option>
+        <option value="451787">Appartement 3 Slaapkamers (0.3) – €451.787,00</option>
+        <option value="387561">Appartement 2 Slaapkamers (1.06) – €387.561,00</option>
+        <option value="309891">Appartement 1 Slaapkamer (1.10) – €309.891,00</option>
+        <option value="301882">Appartement 1 Slaapkamer (1.11) – €301.882,00</option>
+      </select>
+
+      <label for="instap">💶 Instapbedrag (€):</label>
+      <input type="number" id="instap" placeholder="Min. 30% van woningwaarde" />
+
+      <label for="opbouw">📈 Opbouwbedrag (€):</label>
+      <input type="number" id="opbouw" placeholder="Totaal dat je wil opbouwen over 25 jaar" />
+
+      <label for="jaar">📅 Jaar:</label>
+      <input type="number" id="jaar" min="0" max="25" value="0" />
+
+      <button onclick="bereken()">Simuleer</button>
+    </div>
+
+    <canvas id="staafDiagram"></canvas>
+
+    <div class="resultaten">
+      <h2>Inzicht Jaar <span id="jaarLabel">0</span></h2>
+      <p><strong id="aandeelBeschrijving">...</strong></p>
+      <p><strong id="maandlastBeschrijving">Totale maandlast: €0,00</strong></p>
+    </div>
+
+    <div class="info">
+      <h2>Wat zie je hierboven?</h2>
+      <ul>
+        <li><strong>Vaste kosten:</strong> maandelijkse vaste bijdrage (incl. indexatie).</li>
+        <li><strong>Aandeelopbouw:</strong> jouw maandelijkse spaaropbouw (kapitaalaflossing).</li>
+        <li><strong>Rente op opbouw:</strong> interest op je resterend opbouwbedrag.</li>
+        <li><strong>Deel Zuiver Huren:</strong> deel van maandlast dat je huurt en niet opbouwt.</li>
+      </ul>
+    </div>
+
+    <script src="script.js"></script>
+  </div>
+</body>
+</html>

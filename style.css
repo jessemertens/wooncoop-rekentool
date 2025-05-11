@@ -1,0 +1,71 @@
+body {
+  font-family: 'Karma', serif;
+  background-color: #f9f9f9;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+.logo {
+  height: 180px;
+  margin-bottom: 1.5rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+h1 {
+  margin-bottom: 0.5rem;
+  color: #2d3a2d;
+}
+.form label {
+  display: block;
+  margin: 1rem 0 0.5rem;
+}
+input, select {
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+button {
+  background-color: #6b8e23;
+  color: white;
+  padding: 0.7rem 1.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+button:hover {
+  background-color: #5a7a1e;
+}
+canvas {
+  max-width: 30%;
+  margin-top: 2rem;
+}
+.resultaten, .info {
+  margin-top: 2rem;
+  background-color: #ffffff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+ul {
+  padding-left: 1.2rem;
+}
+strong {
+  color: #2d3a2d;
+}
+.info h2, .resultaten h2 {
+  color: #1a468f;
+}
