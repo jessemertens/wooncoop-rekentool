@@ -10,11 +10,13 @@ function bereken() {
 
   if (instap < woningWaarde * 0.3) {
     alert("Het instapbedrag moet minstens 30% van de woningwaarde zijn.");
+    resetResultaten();
     return;
   }
 
   if ((instap + opbouw) < woningWaarde * 0.65) {
     alert("Instapbedrag + opbouwbedrag moet minstens 65% van de woningwaarde zijn.");
+    resetResultaten();
     return;
   }
 
@@ -70,22 +72,17 @@ function bereken() {
         {
           label: "Vaste kosten",
           data: [vasteKosten],
-          backgroundColor: "#808000"
+          backgroundColor: "#9dbcae"
         },
         {
-          label: "Aandeelopbouw",
-          data: [aandeelopbouw / 12],
-          backgroundColor: "#0077b6"
-        },
-        {
-          label: "Rente op opbouwbedrag",
-          data: [rente],
+          label: "Aandeelopbouw + Rente",
+          data: [(aandeelopbouw / 12) + rente],
           backgroundColor: "#c0392b"
         },
         {
           label: "Deel zuiver huren",
           data: [zuiverHuren],
-          backgroundColor: "#999"
+          backgroundColor: "#cccccc"
         }
       ]
     },
