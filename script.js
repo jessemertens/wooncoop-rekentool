@@ -54,7 +54,6 @@ function bereken() {
   const restPercentage = 100 - aandeelPercentage;
 
   jaarLabel.innerText = jaar;
-  aandeelBeschrijving.innerText = `Je bezit ${aandeelPercentage}% (€${totaalAandeel.toLocaleString('nl-BE', { minimumFractionDigits: 2 })}) van de woning. 
   Je moet nog ${restPercentage}% (€${(woningWaarde - totaalAandeel).toLocaleString('nl-BE', { minimumFractionDigits: 2 })}) aantal aandelen opbouwen.`;
   maandlastBeschrijving.innerText = `Totale maandlast: €${maandlast.toFixed(2).replace('.', ',')}`;
 
