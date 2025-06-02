@@ -54,8 +54,8 @@ function bereken() {
   const restPercentage = 100 - aandeelPercentage;
 
   jaarLabel.innerText = jaar;
-  Je moet nog ${restPercentage}% (€${(woningWaarde - totaalAandeel).toLocaleString('nl-BE', { minimumFractionDigits: 2 })}) aantal aandelen opbouwen.`;
-  maandlastBeschrijving.innerText = `Totale maandlast: €${maandlast.toFixed(2).replace('.', ',')}`;
+aandeelBeschrijving.innerText = `Je moet nog ${restPercentage}% (€${(woningWaarde - totaalAandeel).toLocaleString('nl-BE', { minimumFractionDigits: 2 })}) aantal aandelen opbouwen.`;
+maandlastBeschrijving.innerText = `Totale maandlast: €${maandlast.toFixed(2).replace('.', ',')}`;
 
   if (aandeelPercentage >= 100) {
     document.querySelectorAll("input, select, button").forEach(el => el.disabled = true);
